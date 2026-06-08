@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dobruška Hrot – Největší sbírka hrotů a lokálních příběhů</title>
+  <meta name="description" content="Komunitní portál Dobruška Hrot – hroty, beefe, vtipy, drby, memes a lokální novinky z Dobrušky." />
+  <meta name="keywords" content="Dobruška, hroty, beefe, drby, memes, lokální novinky" />
+  <meta property="og:title" content="Dobruška Hrot" />
+  <meta property="og:description" content="Největší sbírka hrotů a lokálních příběhů z Dobrušky" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ LOADER ═══════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span class="loader-logo">🎯</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Načítám hroty…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">🎯</span>
+        <span class="logo-text">Dobruška <strong>Hrot</strong></span>
+      </a>
+
+      <!-- Desktop Search -->
+      <div class="nav-search" id="navSearch">
+        <i class="fa fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Hledat příspěvky, novinky…" />
+        <div class="search-results" id="searchResults"></div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active"><i class="fa fa-house"></i> Domů</a></li>
+        <li><a href="#hroty" class="nav-link"><i class="fa fa-bullseye"></i> Hroty</a></li>
+        <li><a href="#zpravy" class="nav-link"><i class="fa fa-newspaper"></i> Zprávy</a></li>
+        <li><a href="#galerie" class="nav-link"><i class="fa fa-images"></i> Galerie</a></li>
+        <li><a href="#onas" class="nav-link"><i class="fa fa-users"></i> O nás</a></li>
+        <li><a href="#kontakt" class="nav-link"><i class="fa fa-envelope"></i> Kontakt</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mob-link"><i class="fa fa-house"></i> Domů</a>
+    <a href="#hroty" class="mob-link"><i class="fa fa-bullseye"></i> Hroty</a>
+    <a href="#zpravy" class="mob-link"><i class="fa fa-newspaper"></i> Zprávy</a>
+    <a href="#galerie" class="mob-link"><i class="fa fa-images"></i> Galerie</a>
+    <a href="#onas" class="mob-link"><i class="fa fa-users"></i> O nás</a>
+    <a href="#kontakt" class="mob-link"><i class="fa fa-envelope"></i> Kontakt</a>
+    <div class="mob-search">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Hledat…" />
+    </div>
+  </div>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-orb orb3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content reveal">
+      <div class="hero-badge"><i class="fa fa-fire"></i> #1 komunita v Dobrušce</div>
+      <h1 class="hero-title">
+        Největší sbírka<br/>
+        <span class="gradient-text">hrotů a lokálních</span><br/>
+        příběhů z Dobrušky
+      </h1>
+      <p class="hero-desc">
+        Vítej na místě, kde se rodí legendy, sdílejí beefe a každý zná každého.
+        Čistá dobrušská realita – bez filtrů, bez cenzury.
+      </p>
+      <div class="hero-actions">
+        <a href="#hroty" class="btn btn-primary"><i class="fa fa-bullseye"></i> Prozkoumat hroty</a>
+        <a href="#zpravy" class="btn btn-ghost"><i class="fa fa-newspaper"></i> Lokální novinky</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num" data-target="847">0</span><span class="hstat-label">Hrotů</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-num" data-target="3241">0</span><span class="hstat-label">Členů</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-num" data-target="12890">0</span><span class="hstat-label">Zobrazení</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-num" data-target="156">0</span><span class="hstat-label">Zpráv</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Sroluj dolů</span>
+      <i class="fa fa-chevron-down bounce"></i>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TRENDING + LATEST ═══════════════════ -->
+  <section class="section trending-section">
+    <div class="container">
+      <div class="two-col-layout">
+
+        <!-- Trending -->
+        <div class="trending-col reveal">
+          <div class="section-header-small">
+            <i class="fa fa-fire trending-icon"></i>
+            <h2>Top 5 Trendů</h2>
+          </div>
+          <div class="trending-list" id="trendingList">
+            <!-- JS generated -->
+          </div>
+        </div>
+
+        <!-- Latest posts -->
+        <div class="latest-col reveal">
+          <div class="section-header-small">
+            <i class="fa fa-clock latest-icon"></i>
+            <h2>Nejnovější příspěvky</h2>
+          </div>
+          <div class="latest-list" id="latestList">
+            <!-- JS generated -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ HROTY FEED ═══════════════════ -->
+  <section id="hroty" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="gradient-text">🎯 Hroty</span></h2>
+        <p class="section-sub">Čerstvé beefe, vtipy a legendy přímo z ulic Dobrušky</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all"><i class="fa fa-layer-group"></i> Vše</button>
+        <button class="filter-btn" data-filter="new"><i class="fa fa-clock"></i> Nejnovější</button>
+        <button class="filter-btn" data-filter="popular"><i class="fa fa-heart"></i> Nejpopulárnější</button>
+        <button class="filter-btn" data-filter="trending"><i class="fa fa-fire"></i> Trendující</button>
+      </div>
+
+      <div class="posts-grid" id="postsGrid">
+        <!-- JS generated -->
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn btn-outline" id="loadMore">
+          <i class="fa fa-plus"></i> Načíst další hroty
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ZPRÁVY ═══════════════════ -->
+  <section id="zpravy" class="section alt-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="gradient-text">📰 Zprávy</span></h2>
+        <p class="section-sub">Lokální novinky ze srdce Dobrušky</p>
+      </div>
+      <div class="news-grid" id="newsGrid">
+        <!-- JS generated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GALERIE ═══════════════════ -->
+  <section id="galerie" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="gradient-text">📸 Galerie</span></h2>
+        <p class="section-sub">Momenty zachycené přímo v terénu</p>
+      </div>
+      <div class="masonry-grid" id="masonryGrid">
+        <!-- JS generated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lb-close" id="lbClose"><i class="fa fa-xmark"></i></button>
+      <button class="lb-prev" id="lbPrev"><i class="fa fa-chevron-left"></i></button>
+      <div class="lb-img-wrap">
+        <img src="" alt="" id="lbImg" />
+        <div class="lb-caption" id="lbCaption"></div>
+      </div>
+      <button class="lb-next" id="lbNext"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ O NÁS ═══════════════════ -->
+  <section id="onas" class="section alt-section">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-text reveal">
+          <div class="section-header-small">
+            <i class="fa fa-users" style="color:var(--primary)"></i>
+            <h2>O nás</h2>
+          </div>
+          <p class="about-desc">
+            <strong>Dobruška Hrot</strong> je komunitní projekt zaměřený na sdílení zajímavých
+            událostí, lokálních příběhů, meme obsahu a novinek z města Dobruška.
+          </p>
+          <p class="about-desc">
+            Vznikli jsme z čisté nudy a přílišné znalosti místních poměrů. Pokud něco
+            stojí za sdílení – ať je to beef na náměstí, vtip z hospody nebo největší
+            skandál roku – najdeš to tady.
+          </p>
+          <p class="about-desc">
+            Připoj se k tisícům lokálních patriotů a přispěj vlastním hrotem. Anonymita
+            zaručena. Kvalita vtipu nikoliv.
+          </p>
+          <div class="about-badges">
+            <span class="badge"><i class="fa fa-shield"></i> Anonymní</span>
+            <span class="badge"><i class="fa fa-bolt"></i> Real-time</span>
+            <span class="badge"><i class="fa fa-heart"></i> Komunita</span>
+            <span class="badge"><i class="fa fa-map-pin"></i> Dobruška</span>
+          </div>
+        </div>
+        <div class="about-stats-grid reveal">
+          <div class="astat-card glass-card">
+            <i class="fa fa-bullseye"></i>
+            <span class="astat-num">847</span>
+            <span>Hrotů</span>
+          </div>
+          <div class="astat-card glass-card">
+            <i class="fa fa-users"></i>
+            <span class="astat-num">3 241</span>
+            <span>Členů</span>
+          </div>
+          <div class="astat-card glass-card">
+            <i class="fa fa-fire"></i>
+            <span class="astat-num">98</span>
+            <span>Beefů</span>
+          </div>
+          <div class="astat-card glass-card">
+            <i class="fa fa-laugh"></i>
+            <span class="astat-num">412</span>
+            <span>Vtipů</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ KONTAKT ═══════════════════ -->
+  <section id="kontakt" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="gradient-text">📞 Kontakt</span></h2>
+        <p class="section-sub">Máš hrot? Napiš nám!</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><i class="fa fa-location-dot"></i></div>
+            <div>
+              <strong>Kde jsme</strong>
+              <p>Dobruška, Královéhradecký kraj</p>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><i class="fa fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <p>hrot@dobruska.cz</p>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><i class="fa fa-clock"></i></div>
+            <div>
+              <strong>Odpovídáme</strong>
+              <p>Obvykle do 24 hodin (záleží na pivech)</p>
+            </div>
+          </div>
+          <div class="social-links-contact">
+            <a href="#" class="slink"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="slink"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="slink"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="slink"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal" id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label for="fname">Jméno</label>
+            <input type="text" id="fname" placeholder="Jak ti říkají na vesnici?" required />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" placeholder="tvuj@email.cz" required />
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Zpráva</label>
+            <textarea id="fmsg" rows="5" placeholder="Napiš svůj hrot, beef, vzkaz nebo přání…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">
+            <i class="fa fa-paper-plane"></i> Odeslat zprávu
+          </button>
+          <div class="form-success" id="formSuccess" style="display:none">
+            <i class="fa fa-check-circle"></i> Zpráva odeslána! Brzy se ozveme.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">🎯</span>
+            <span>Dobruška <strong>Hrot</strong></span>
+          </div>
+          <p>Největší sbírka hrotů, beefů a lokálních příběhů z Dobrušky od roku 2024.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Sekce</h4>
+          <ul>
+            <li><a href="#home">Domů</a></li>
+            <li><a href="#hroty">Hroty</a></li>
+            <li><a href="#zpravy">Zprávy</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#onas">O nás</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#">Pravidla</a></li>
+            <li><a href="#">Ochrana soukromí</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Dostávej hroty mailem</h4>
+          <p>Každý týden výběr nejlepšího obsahu.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="tvuj@email.cz" />
+            <button class="btn btn-primary btn-sm">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024–2026 Dobruška Hrot. Všechna práva vyhrazena s patřičnou nadsázkou.</p>
+        <p>Vyrobeno s ❤️ a dostatečným množstvím piva v Dobrušce.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Zpět nahoru">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
